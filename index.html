@@ -23,6 +23,7 @@
             max-width: 800px;
             width: 100%;
             box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+            position: relative;
         }
 
         h1 {
@@ -75,6 +76,25 @@
         .bot-invite a:hover {
             background-color: #55aaff;
         }
+
+        .patreon-icon {
+            display: flex;
+            justify-content: flex-end;
+            margin-top: 10px;
+            align-items: center;
+        }
+
+        .patreon-icon img {
+            width: 50px; /* Adjust the width of the Patreon icon */
+            height: auto;
+            cursor: pointer;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .patreon-icon img:hover {
+            transform: scale(1.1); /* Zoom effect on hover */
+        }
+
     </style>
 </head>
 
@@ -83,13 +103,21 @@
         <h1>How to Use Age of Empires X Bot</h1>
 
         <div class="bot-invite">
-            <a href="https://discord.com/api/oauth2/authorize?client_id=877576701306089512&permissions=10604009483856&scope=bot%20applications.commands" target="_blank">Invite the Bot</a>
+            <a href="https://discord.com/api/oauth2/authorize?client_id=877576701306089512&permissions=10604009483856&scope=applications.commands%20bot" target="_blank">Invite the Bot</a>
+        </div>
+        
+        <!-- Patreon icon section -->
+        <div class="patreon-icon">
+            <a href="LINK_TO_YOUR_PATREON_PAGE" target="_blank">
+                <img src="patreon_icon.png" alt="Patreon Icon">
+            </a>
         </div>
 
         <div class="command-section">
             <h3>PlayerID Management</h3>
             <p><strong>Description:</strong> Base command for PlayerID management.</p>
             <p><strong>Usage:</strong> [p]aoe4</p>
+            <a href="#commands">Go to Commands Section</a>
         </div>
 
         <!-- Add more sections with commands -->
@@ -108,6 +136,27 @@
             <p>Additional description or details about the image.</p>
         </div>
 
+        <div class="command-section">
+            <h3>PlayerID Management</h3>
+            <p><strong>Description:</strong> Base command for PlayerID management.</p>
+            <p><strong>Usage:</strong> [p]aoe4</p>
+        </div>
+
+        <!-- Add more sections with commands -->
+
+        <div class="command-section">
+            <h5>set</h5>
+            <p><strong>Description:</strong> Used to manage announcement channel.</p>
+            <p><strong>Usage:</strong> [p]aoe4 admin set</p>
+        </div>
+
+        <!-- Example image section -->
+        <div class="command-section"  id="commands">
+            <h5>Example Image Section</h5>
+            <p>This is an example section with an image:</p>
+            <img src="https://example.com/image.jpg" alt="Example Image">
+            <p>Additional description or details about the image.</p>
+        </div>
         <!-- Bot invite link section -->
         <!-- Update YOUR_BOT_INVITE_LINK with your bot's actual invite link -->
 
