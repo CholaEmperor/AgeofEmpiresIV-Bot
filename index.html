@@ -7,13 +7,26 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            color: #333;
-            margin: 20px;
+            background-color: #111;
+            color: #eee;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 30px;
+            border-radius: 10px;
+            max-width: 800px;
+            width: 100%;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
         }
 
         h1 {
-            color: #004080;
+            color: #55aaff;
             text-align: center;
         }
 
@@ -21,7 +34,7 @@
         h3,
         h4,
         h5 {
-            color: #0066cc;
+            color: #66ff99;
         }
 
         p {
@@ -29,19 +42,25 @@
         }
 
         .command-section {
-            background-color: #fff;
+            background-color: #333;
             border-radius: 5px;
-            padding: 10px;
+            padding: 15px;
             margin-bottom: 20px;
-            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 15px auto;
         }
     </style>
 </head>
 
 <body>
-    <h1>Age of Empires IV Discord Bot Guide</h1>
-    <div class="command-section">
-        <h2>Commands</h2>
+    <div class="container">
+        <h1>Age of Empires IV Discord Bot Guide</h1>
 
         <div class="command-section">
             <h3>PlayerID Management</h3>
@@ -49,31 +68,24 @@
             <p><strong>Usage:</strong> [p]aoe4</p>
         </div>
 
+        <!-- Add more sections with commands -->
+
         <div class="command-section">
-            <h3>Admin Commands</h3>
-            <p><strong>Description:</strong> Base command for Admin.</p>
-            <p><strong>Usage:</strong> [p]aoe4 admin</p>
-
-            <!-- Add more sections for individual commands -->
-
-            <h4>Admin Commands:</h4>
-
-            <div class="command-section">
-                <h5>add</h5>
-                <p><strong>Description:</strong> Used to add player ID.</p>
-                <p><strong>Usage:</strong> [p]aoe4 admin add &lt;player_id&gt; [user_id]</p>
-            </div>
-
-            <!-- Add similar sections for other commands -->
-
-            <div class="command-section">
-                <h5>set</h5>
-                <p><strong>Description:</strong> Used to manage announcement channel.</p>
-                <p><strong>Usage:</strong> [p]aoe4 admin set</p>
-            </div>
-
-            <!-- Add more sections for the rest of the commands -->
+            <h5>set</h5>
+            <p><strong>Description:</strong> Used to manage announcement channel.</p>
+            <p><strong>Usage:</strong> [p]aoe4 admin set</p>
         </div>
+
+        <!-- Example image section -->
+        <div class="command-section">
+            <h5>Example Image Section</h5>
+            <p>This is an example section with an image:</p>
+            <img src="https://example.com/image.jpg" alt="Example Image">
+            <p>Additional description or details about the image.</p>
+        </div>
+
+        <!-- Add more command sections or image sections -->
+
     </div>
 </body>
 
