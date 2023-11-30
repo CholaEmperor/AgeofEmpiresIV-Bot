@@ -325,7 +325,7 @@
   </div>
     <script>
 function copyText(elementId, clickedElement) {
-    const commandText = document.getElementById(elementId).querySelector('code').textContent.trim();
+    const commandText = document.getElementById(elementId).getElementsByTagName('code')[0].textContent.trim();
     navigator.clipboard.writeText(commandText)
         .then(() => {
             updateButtonState(clickedElement);
@@ -335,6 +335,7 @@ function copyText(elementId, clickedElement) {
             console.error('Unable to copy:', err);
         });
 }
+
 
 function addClickedEffect(clickedElement) {
     clickedElement.classList.add('clicked-effect');
