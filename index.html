@@ -17,7 +17,7 @@
         }
 
         .container {
-            background-color: rgba(0, 0, 0, 0.8);
+            background-color: #000;
             padding: 30px;
             border-radius: 10px;
             max-width: 800px;
@@ -43,11 +43,11 @@
         }
 
         .command-section {
-            background-color: #333;
+            /*background-color: #333;*/
             border-radius: 5px;
             padding: 15px;
             margin-bottom: 20px;
-            box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+            /*box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);*/
         }
 
         img {
@@ -94,8 +94,46 @@
         .patreon-icon img:hover {
             transform: scale(1.1); /* Zoom effect on hover */
         }
+        /* Add CSS styles for the border around pre and code tags */
+        /*pre {
+            border: 1px solid #ccc;
+            padding: 10px;
+            border-radius: 0px;
+            overflow-x: auto;
+            margin: 0;
+        }
 
+        code {
+            display: block;
+            white-space: pre;
+        } */
+        .code-container {
+            position: relative;
+            border: 1px solid #ccc;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+
+        .copy-icon {
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            cursor: pointer;
+            background-color: #000;
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            z-index: 1;
+        }
+                
+        .clicked-effect {
+        background-color: #55aaff;
+        border: 1px solid #ccc;
+        color: #333;
+        }
     </style>
+    
 </head>
 
 <body>
@@ -126,7 +164,20 @@
             <h5>set</h5>
             <p><strong>Description:</strong> Used to manage announcement channel.</p>
             <p><strong>Usage:</strong> [p]aoe4 admin set</p>
+            <pre class="code-container"><code id="commandCode7">// Command code here7 set</code><div class="copy-icon" onclick="copyText('commandCode7', this)">Copy</div></pre>
         </div>
+
+          
+        <div class="command-section">
+            <h5>set2</h5>
+            <p><strong>Description:</strong> Used to manage announcement channel.</p>
+            <p><strong>Usage:</strong> [p]aoe4 admin set</p>
+            <pre class="code-container">
+                <code id="commandCode72">// Command code here72 set</code>
+                <div class="copy-icon" onclick="copyText('commandCode7', this)">Copy</div>
+            </pre>
+        </div>
+
 
         <!-- Example image section -->
         <div class="command-section">
@@ -145,9 +196,13 @@
         <!-- Add more sections with commands -->
 
         <div class="command-section">
-            <h5>set</h5>
-            <p><strong>Description:</strong> Used to manage announcement channel.</p>
-            <p><strong>Usage:</strong> [p]aoe4 admin set</p>
+            <h5>Example Command</h5>
+            <pre class="code-container">
+                <div class="copy-icon" onclick="copyText('commandCode1')">Copy</div>
+                <code id="commandCode1">
+// Command code here
+                </code>
+            </pre>
         </div>
 
         <!-- Example image section -->
@@ -159,8 +214,69 @@
         </div>
         <!-- Bot invite link section -->
         <!-- Update YOUR_BOT_INVITE_LINK with your bot's actual invite link -->
+    
+    <div class="command-section">
+        <h5>Example Command</h5>
+        <pre class="code-container">
+        	<div class="copy-icon" onclick="copyText('commandCode')">Copy</div>
+            <code id="commandCode">
+    @commands.group()
+    async def aoe4(self, ctx: commands.Context):
+        """Base command for PlayerID management."""
+        pass
 
+    @admin.command(name="add")
+    async def add_playerid(self, ctx, player_id: int, user_id: Optional[int] = None):
+        """
+        'add' Used to add playerid
+        """
+        # Your command logic here
+
+    # Add more command blocks as needed
+            </code>
+        </pre>
     </div>
+   <div class="command-section">
+    <h5>Example Command</h5>
+    <pre class="code-container">
+        <div class="copy-icon" onclick="copyText('commandCode6', this)">Copy</div>
+        <code id="commandCode6">
+            // Command code here6
+        </code>
+    </pre>
+	</div>
+  </div>
+    <script>
+function copyText(elementId, clickedElement) {
+    const commandText = document.getElementById(elementId).textContent;
+    navigator.clipboard.writeText(commandText)
+        .then(() => {
+            updateButtonState(clickedElement);
+            addClickedEffect(clickedElement);
+        })
+        .catch(err => {
+            console.error('Unable to copy:', err);
+        });
+}
+
+function addClickedEffect(clickedElement) {
+    clickedElement.classList.add('clicked-effect');
+    setTimeout(() => {
+        clickedElement.classList.remove('clicked-effect');
+        restoreButtonState(clickedElement);
+    }, 1500); // Remove the effect after 0.5 seconds (adjust as needed)
+}
+
+function updateButtonState(clickedElement) {
+    clickedElement.innerText = 'Copied!';
+}
+
+function restoreButtonState(clickedElement) {
+    clickedElement.innerText = 'Copy';
+}
+
+    </script>
+
 </body>
 
 </html>
