@@ -171,8 +171,8 @@
             <p class="tabbed">Once you have your player ID, the command appears like this.</p>
             <pre class="code-container"><code>\aoe4 add 12xxxx</code></pre>
             <p class="tabbed">*Replace the player ID with your own ID</p>
-            
         </div>
+        
       	<div class="command-section" id="rm">
             <h4>remove</h4>
             <p class="tabbed">With this command, all of your data is deleted from the bot's records..</p>
@@ -192,41 +192,116 @@
         <p>Replace <code>1234567</code> in the example with the actual number that appears in the URL of your profile page on aoe4world.com to locate your player ID.</p>
     	</div>
         
-            <!-- Explanation of Commands -->
-    <div class="command-explanation">
-        <h3>Command Explanations</h3>
-
-        <div class="command-section">
-            <h5>add</h5>
-            <p class="tabbed">This command is for adding your player ID to the bot's database.</p>
-            <p class="tabbed">How to Use:</p>
-            <ul class="tabbed">
-                <li>Get your unique player ID from aoe4world.com.</li>
-                <li>Type <code>[p]aoe4 add</code> followed by your player ID.</li>
-                <li>Example: <code>[p]aoe4 add 12xxxx</code></li>
-            </ul>
-            <p class="tabbed">Remember:</p>
-            <ul class="tabbed">
-                <li>You can only have one player ID registered.</li>
-                <li>If you want to add your friend, they should do the same process themselves or contact the server admin.</li>
-            </ul>
-        </div>
-
-        <div class="command-section">
-            <h5>remove (or rm)</h5>
-            <p class="tabbed">This command removes your player ID from the bot's records.</p>
-            <p class="tabbed">How to Use:</p>
-            <ul class="tabbed">
-                <li>Simply type <code>[p]aoe4 rm</code>.</li>
-                <li>You'll be asked for confirmation before removal.</li>
-                <li>If confirmed, your player ID will be removed.</li>
-            </ul>
-            <p class="tabbed">Note:</p>
-            <ul class="tabbed">
-                <li>If you wish to add a different ID or a friend's ID, they should follow the same process individually or contact the server admin.</li>
+        <div class="index-list">
+            <h3>Admin Commands</h3>
+            <p>Only server administrators can execute any of the commands listed below.</p>
+            <ul>
+                <li><a href="#adminadd">add</a></li>
+                <li><a href="#removeplayer">removeplayer</a></li>
+                <li><a href="#removeuser">removeuser</a></li>
+                <li><a href="#list">list</a></li>
+                <li><a href="#set">set</a></li>
+                <li><a href="#leaderboard">leaderboard</a></li>
+                <li><a href="#delleaderboard">delleaderboard</a></li>
+                <li><a href="#createroles">createroles</a></li>
+                <li><a href="#deleteroles">deleteroles</a></li>
+                <li><a href="#process">process</a></li>
+                <li><a href="#clear">clear</a></li>
+                
+                <!-- Add more list items for other sections -->
             </ul>
         </div>
-    </div>
+        
+		<div class="command-section" id="adminadd">
+            <h4>add</h4>
+            <p class="tabbed">To add a user, you need their Discord userid and player ID.</p>
+			<a href="https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID-" target="_blank" style="margin-left: 20px;">*How to get the userid</a>
+			<p class="tabbed"><a href="#getplayerid">*Get player ID</a> from www.aoe4world.com</p>
+          	<pre class="code-container"><code>\aoe4 admin add 12xxxx 12345678</code></pre>
+            <p class="tabbed">*replace the actual playerid and userid</p>
+            <p class="tabbed">*Note The userid is optional, if you opt for below method user will not get the roles.</p>
+            
+            <p style="text-align: center;">(or)</p>
+            
+            <p class="tabbed">You can add player ID to the bot's database by using this command.</p>
+            <pre class="code-container"><code id="adminadd">\aoe4 admin add</code><div class="copy-icon" onclick="copyText('add', this)">Copy</div></pre>
+            <p class="tabbed">Once you have your player ID, the command appears like this.</p>
+            <pre class="code-container"><code>\aoe4 admin add 12xxxx</code></pre>
+        </div>
+        
+        <div class="command-section" id="removeplayer">
+        	<p>Users can be removed using either their userid or their player ID.</p>
+            <h4>removeplayer</h4>
+            <p class="tabbed">use player ID to delete the user from database.</p>
+      		<pre class="code-container"><code id="removeplayer">\aoe4 admin removeplayer</code><div class="copy-icon" onclick="copyText('add', this)">Copy</div></pre>
+          	<pre class="code-container"><code>\aoe4 admin removeplayer 12xxxx</code></pre>
+		</div>
+            
+        <div class="command-section" id="removeuser">
+        	<p>Users can be removed using either their userid or their player ID.</p>
+            <h4>removeuser</h4>
+            <p class="tabbed">use userid to delete the user from database.</p>
+      		<pre class="code-container"><code id="removeuser">\aoe4 admin removeuser</code><div class="copy-icon" onclick="copyText('add', this)">Copy</div></pre>
+          	<pre class="code-container"><code>\aoe4 admin removeuser 12345678</code></pre>
+       	</div>
+        
+        <div class="command-section" id="list">
+            <h4>removeuser</h4>
+            <p class="tabbed">Lists user from database.</p>
+      		<pre class="code-container"><code id="list">\aoe4 admin list</code><div class="copy-icon" onclick="copyText('add', this)">Copy</div></pre>
+       	</div>
+        
+        <div class="command-section" id="set">
+            <h4>set</h4>
+            <p class="tabbed">This command used to set the channel id where the pre and post game summary are posted.</p>
+            <p class="tabbed">Go to the desired channel and execute the command</p>
+      		<pre class="code-container"><code id="set">\aoe4 admin set</code><div class="copy-icon" onclick="copyText('add', this)">Copy</div></pre>
+            <p class="tabbed">To change or remove the channel from the database.</p>
+            <ul>
+            	<li>To change the channel apply the above command on the different channel.</li>
+                <li>To remove the channel apply the above command on the active channel where it posts the summary</li>
+			</ul>
+        </div>
+        
+		<div class="command-section" id="leaderboard">
+            <h4>leaderboard</h4>
+            <p class="tabbed">use this command to produce leaderboard</p>
+      		<pre class="code-container"><code id="leaderboard">\aoe4 admin leaderboard</code><div class="copy-icon" onclick="copyText('add', this)">Copy</div></pre>
+            <p class="tabbed">*Dont not delete the messages it produces,The leaderboard will be edited every 24hr.</p>
+            <p class="tabbed">*Note Please attempt to utilize this feature in an empty channel to prevent the leaderboard from moving to the top.</p>
+		</div>
+        
+		<div class="command-section" id="delleaderboard">
+            <h4>delleaderboard</h4>
+            <p class="tabbed">use this command to remove leaderboard data from database.</p>
+      		<pre class="code-container"><code id="delleaderboard">\aoe4 admin delleaderboard</code><div class="copy-icon" onclick="copyText('add', this)">Copy</div></pre>
+            
+		<div class="command-section" id="createroles">
+            <h4>createroles</h4>
+            <p class="tabbed">use this command to roles, this will create like 19 roles</p>
+      		<pre class="code-container"><code id="createroles">\aoe4 admin createroles</code><div class="copy-icon" onclick="copyText('add', this)">Copy</div></pre>
+            <p class="tabbed">*Don't change bot role postion below any of the role created</p>
+            <p class="tabbed">*Don't delete any of the roles created.</p>
+            <p class="tabbed">The generated rank role permission can be changed to your preference, including the color scheme.</p>
+      	</div>
+
+		<div class="command-section" id="deleteroles">
+            <h4>deleteroles</h4>
+            <p class="tabbed">Execute this command to delete created role data from the database and remove all associated roles.</p>
+      		<pre class="code-container"><code id="deleteroles">\aoe4 admin delleaderboard</code><div class="copy-icon" onclick="copyText('add', this)">Copy</div></pre>
+      	</div>
+        
+        <div class="command-section" id="process">
+            <h4>process</h4>
+            <p class="tabbed">This command shows the list of player ID in cache</p>
+      		<pre class="code-container"><code id="process">\aoe4 admin process</code><div class="copy-icon" onclick="copyText('add', this)">Copy</div></pre>
+       	</div>
+        
+        <div class="command-section" id="clear">
+            <h4>clear</h4>
+            <p class="tabbed">This command clears the cache while leaving the database unchanged. Instructions for this action are displayed in the warnings.</p>
+      		<pre class="code-container"><code id="clear">\aoe4 admin clear</code><div class="copy-icon" onclick="copyText('add', this)">Copy</div></pre>
+       	</div>
 
         <!-- Example image section -->
         <div class="command-section"  id="commands">
