@@ -94,25 +94,16 @@
         .patreon-icon img:hover {
             transform: scale(1.1); /* Zoom effect on hover */
         }
-        /* Add CSS styles for the border around pre and code tags */
-        /*pre {
-            border: 1px solid #ccc;
-            padding: 10px;
-            border-radius: 0px;
-            overflow-x: auto;
-            margin: 0;
-        }
-
-        code {
-            display: block;
-            white-space: pre;
-        } */
+        
         .code-container {
+        	margin-left: 20px;
+            margin-Right:100px;
             position: relative;
             border: 1px solid #ccc;
             padding: 10px;
             border-radius: 5px;
             overflow-x: auto;
+            min-height: 17px;
         }
 
         .copy-icon {
@@ -132,6 +123,9 @@
         border: 1px solid #ccc;
         color: #333;
         }
+		.tabbed {
+        padding-left: 20px; /* Adjust the value as needed */
+    }
     </style>
     
 </head>
@@ -150,60 +144,89 @@
                 <img src="patreon_icon.png" alt="Patreon Icon">
             </a>
         </div>
-
-        <div class="command-section">
-            <h3>PlayerID Management</h3>
-            <p><strong>Description:</strong> Base command for PlayerID management.</p>
-            <p><strong>Usage:</strong> [p]aoe4</p>
-            <a href="#commands">Go to Commands Section</a>
+      	<div class="command-section">
+        	<h3>Features:</h3>
+            <ul class="feature-list">
+                <li class="feature-item">Admin Database Control: Manage player databases effortlessly.</li>
+                <li class="feature-item">Pre and Post Game Summary: Posts summaries before and after each game.</li>
+                <li class="feature-item">Auto Assign Roles Based on Ranks: Automatic rank-based role assignment updated every 24 hours.</li>
+                <li class="feature-item">Server-based Leaderboard: Dynamic leaderboard updated every 24 hours for your server.</li>
+                <li class="feature-item">User Data Management: Allow users to easily add or remove their game data.</li>
+            </ul>
+        
+      	<div class="index-list">
+            <h3>Basic Commands</h3>
+            <ul>
+                <li><a href="#add">add</a></li>
+                <li><a href="#rm">remove</a></li>
+                <!-- Add more list items for other sections -->
+            </ul>
         </div>
 
-        <!-- Add more sections with commands -->
+        <div class="command-section" id="add">
+            <h4>add</h4>
+            <p class="tabbed">You can add your player ID to the bot's database by using this command.</p>
+            <p class="tabbed">*if you dont know your unique player ID, here is how to <a href="#getplayerid">Get your player ID</a> from www.aoe4world.com</p>
+            <pre class="code-container"><code id="add">\aoe4 add</code><div class="copy-icon" onclick="copyText('add', this)">Copy</div></pre>
+            <p class="tabbed">Once you have your player ID, the command appears like this.</p>
+            <pre class="code-container"><code>\aoe4 add 12xxxx</code></pre>
+            <p class="tabbed">*Replace the player ID with your own ID</p>
+            
+        </div>
+      	<div class="command-section" id="rm">
+            <h4>remove</h4>
+            <p class="tabbed">With this command, all of your data is deleted from the bot's records..</p>
+            <p class="tabbed">Copy and paste the command below; *your player ID is not required.</p>
+            <pre class="code-container"><code id="rm">\aoe4 rm</code><div class="copy-icon" onclick="copyText('rm', this)">Copy</div></pre>
+        </div>
+        
+      	<div class="command-section" id="getplayerid">
+        <h5>How to Find Your Player ID on AOE4World.com</h5>
+        <ol>
+            <li>Visit <a href="https://www.aoe4world.com/" target="_blank">aoe4world.com</a>.</li>
+            <li>Search for your In-Game Name in the search bar.</li>
+            <li>Click on your profile or the relevant search result.</li>
+            <li>Your player ID will be in the URL:</li>
+        </ol>
+        <p><strong>Example:</strong> If the URL is <code>https://aoe4world.com/players/1234567</code>, your player ID is <code>1234567</code>.</p>
+        <p>Replace <code>1234567</code> in the example with the actual number that appears in the URL of your profile page on aoe4world.com to locate your player ID.</p>
+    	</div>
+        
+            <!-- Explanation of Commands -->
+    <div class="command-explanation">
+        <h3>Command Explanations</h3>
 
         <div class="command-section">
-            <h5>set</h5>
-            <p><strong>Description:</strong> Used to manage announcement channel.</p>
-            <p><strong>Usage:</strong> [p]aoe4 admin set</p>
-            <pre class="code-container"><code id="commandCode7">// Command code here7 set</code><div class="copy-icon" onclick="copyText('commandCode7', this)">Copy</div></pre>
-        </div>
-
-          
-        <div class="command-section">
-            <h5>set2</h5>
-            <p><strong>Description:</strong> Used to manage announcement channel.</p>
-            <p><strong>Usage:</strong> [p]aoe4 admin set</p>
-            <pre class="code-container">
-                <code id="commandCode72">// Command code here72 set</code>
-                <div class="copy-icon" onclick="copyText('commandCode7', this)">Copy</div>
-            </pre>
-        </div>
-
-
-        <!-- Example image section -->
-        <div class="command-section">
-            <h5>Example Image Section</h5>
-            <p>This is an example section with an image:</p>
-            <img src="https://example.com/image.jpg" alt="Example Image">
-            <p>Additional description or details about the image.</p>
+            <h5>add</h5>
+            <p class="tabbed">This command is for adding your player ID to the bot's database.</p>
+            <p class="tabbed">How to Use:</p>
+            <ul class="tabbed">
+                <li>Get your unique player ID from aoe4world.com.</li>
+                <li>Type <code>[p]aoe4 add</code> followed by your player ID.</li>
+                <li>Example: <code>[p]aoe4 add 12xxxx</code></li>
+            </ul>
+            <p class="tabbed">Remember:</p>
+            <ul class="tabbed">
+                <li>You can only have one player ID registered.</li>
+                <li>If you want to add your friend, they should do the same process themselves or contact the server admin.</li>
+            </ul>
         </div>
 
         <div class="command-section">
-            <h3>PlayerID Management</h3>
-            <p><strong>Description:</strong> Base command for PlayerID management.</p>
-            <p><strong>Usage:</strong> [p]aoe4</p>
+            <h5>remove (or rm)</h5>
+            <p class="tabbed">This command removes your player ID from the bot's records.</p>
+            <p class="tabbed">How to Use:</p>
+            <ul class="tabbed">
+                <li>Simply type <code>[p]aoe4 rm</code>.</li>
+                <li>You'll be asked for confirmation before removal.</li>
+                <li>If confirmed, your player ID will be removed.</li>
+            </ul>
+            <p class="tabbed">Note:</p>
+            <ul class="tabbed">
+                <li>If you wish to add a different ID or a friend's ID, they should follow the same process individually or contact the server admin.</li>
+            </ul>
         </div>
-
-        <!-- Add more sections with commands -->
-
-        <div class="command-section">
-            <h5>Example Command</h5>
-            <pre class="code-container">
-                <div class="copy-icon" onclick="copyText('commandCode1')">Copy</div>
-                <code id="commandCode1">
-// Command code here
-                </code>
-            </pre>
-        </div>
+    </div>
 
         <!-- Example image section -->
         <div class="command-section"  id="commands">
@@ -212,39 +235,7 @@
             <img src="https://example.com/image.jpg" alt="Example Image">
             <p>Additional description or details about the image.</p>
         </div>
-        <!-- Bot invite link section -->
-        <!-- Update YOUR_BOT_INVITE_LINK with your bot's actual invite link -->
-    
-    <div class="command-section">
-        <h5>Example Command</h5>
-        <pre class="code-container">
-        	<div class="copy-icon" onclick="copyText('commandCode')">Copy</div>
-            <code id="commandCode">
-    @commands.group()
-    async def aoe4(self, ctx: commands.Context):
-        """Base command for PlayerID management."""
-        pass
 
-    @admin.command(name="add")
-    async def add_playerid(self, ctx, player_id: int, user_id: Optional[int] = None):
-        """
-        'add' Used to add playerid
-        """
-        # Your command logic here
-
-    # Add more command blocks as needed
-            </code>
-        </pre>
-    </div>
-   <div class="command-section">
-    <h5>Example Command</h5>
-    <pre class="code-container">
-        <div class="copy-icon" onclick="copyText('commandCode6', this)">Copy</div>
-        <code id="commandCode6">
-            // Command code here6
-        </code>
-    </pre>
-	</div>
   </div>
     <script>
 function copyText(elementId, clickedElement) {
