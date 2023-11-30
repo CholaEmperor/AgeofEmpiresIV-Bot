@@ -325,7 +325,7 @@
   </div>
     <script>
 function copyText(elementId, clickedElement) {
-    const commandText = document.getElementById(elementId).textContent;
+    const commandText = document.getElementById(elementId).querySelector('code').textContent.trim();
     navigator.clipboard.writeText(commandText)
         .then(() => {
             updateButtonState(clickedElement);
