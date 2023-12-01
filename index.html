@@ -38,15 +38,15 @@
             color: #66ff99;
         }
 
-	/* Unvisited link color */
-	li a:link {
-	color: #55aaff; /* Change this to the desired color */
-	}
-	
-	/* Visited link color */
-	li a:visited {
-	color: #55aaff; /* Change this to the desired color */
-	}
+        /* Unvisited link color */
+        a:link {
+            color: #55aaff; /* Change this to the desired color */
+        }
+
+        /* Visited link color */
+        a:visited {
+            color: #55aaff; /* Change this to the desired color */
+        }
 
         p {
             margin-bottom: 10px;
@@ -95,11 +95,15 @@
         }
 
         .patreon-icon img {
-            width: 50px; /* Adjust the width of the Patreon icon */
-            height: auto;
-	    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
-            cursor: pointer;
-            transition: transform 0.3s ease-in-out;
+          width: 50px;
+          height: auto;
+          filter: drop-shadow(0 0 5px #66ff99); /* Subtle shadow effect */
+          cursor: pointer;
+          transition: transform 0.3s ease-in-out;
+        }
+        
+        .patreon-icon span {
+          margin-top: 20px; /* Adjust the spacing between the image and text */
         }
 
         .patreon-icon img:hover {
@@ -151,8 +155,9 @@
         
         <!-- Patreon icon section -->
         <div class="patreon-icon">
-            <a href="LINK_TO_YOUR_PATREON_PAGE" target="_blank">
+            <a href="https://www.patreon.com/KarthikDev" target="_blank">
                 <img src="img/PATREON_SYMBOL_1_BLACK_RGB.png" alt="Patreon Icon">
+                <!--<span>Support</span>-->
             </a>
         </div>
       	<div class="command-section">
@@ -179,8 +184,8 @@
             <p class="tabbed">You can add your player ID to the bot's database by using this command.</p>
             <p class="tabbed">*if you dont know your unique player ID, here is how to <a href="#getplayerid">Get your player ID</a> from www.aoe4world.com</p>
             <pre class="code-container"><code id="add">\aoe4 add</code><div class="copy-icon" onclick="copyText('add', this)">Copy</div></pre>
-            <p class="tabbed">Once you have your player ID, the command appears like this.</p>
-            <pre class="code-container"><code>\aoe4 add 12xxxx</code></pre>
+            <p class="tabbed">Once you have your player ID, apply to the command like shown blow.</p>
+            <pre class="code-container"><code>\aoe4 add 123456</code></pre>
             <p class="tabbed">*Replace the player ID with your own ID</p>
         </div>
         
@@ -228,7 +233,7 @@
             <p class="tabbed">To add a user, you need their Discord userid and player ID.</p>
 			<a href="https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID-" target="_blank" style="margin-left: 20px;">*How to get the userid</a>
 			<p class="tabbed"><a href="#getplayerid">*Get player ID</a> from www.aoe4world.com</p>
-          	<pre class="code-container"><code>\aoe4 admin add 12xxxx 12345678</code></pre>
+          	<pre class="code-container"><code>\aoe4 admin add 123456 12345678</code></pre>
             <p class="tabbed">*replace the actual playerid and userid</p>
             <p class="tabbed">*Note The userid is optional, if you opt for below method user will not get the roles.</p>
             
@@ -237,7 +242,7 @@
             <p class="tabbed">You can add player ID to the bot's database by using this command.</p>
             <pre class="code-container"><code id="adminadd">\aoe4 admin add</code><div class="copy-icon" onclick="copyText('adminadd', this)">Copy</div></pre>
             <p class="tabbed">Once you have your player ID, the command appears like this.</p>
-            <pre class="code-container"><code>\aoe4 admin add 12xxxx</code></pre>
+            <pre class="code-container"><code>\aoe4 admin add 123456</code></pre>
         </div>
         
         <div class="command-section" id="removeplayer">
