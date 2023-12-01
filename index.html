@@ -189,6 +189,7 @@
                 <!--<span>Support</span>-->
             </a>
         </div>
+
       	<div class="command-section">
         	<h3>Features:</h3>
             <ul class="feature-list">
@@ -198,6 +199,23 @@
                 <li class="feature-item">Server-based Leaderboard: Dynamic leaderboard updated every 24 hours for your server.</li>
                 <li class="feature-item">User Data Management: Allow users to easily add or remove their game data.</li>
             </ul>
+		</div>
+            
+        <div class="command-section" id="prefixSection">
+            <h2>Prefix for the Bot</h2>
+            <p class="tabbed">In this bot, the prefix is set to be <code>"Age of Empires X"</code> or <code>"\"</code> (a backslash).</p>            
+	    <pre class="code-container"><code id="copyprefix2">\</code><div class="copy-icon" onclick="copyText('copyprefix2', this)">Copy</div></pre>
+            <p class="tabbed">Examples</p>
+            <pre class="code-container"><code id="copyprefix2eg1">\aoe4</code><div class="copy-icon" onclick="copyText('copyprefix2eg1', this)">Copy</div></pre>
+            <pre class="code-container"><code id="copyprefix2eg2">\help</code><div class="copy-icon" onclick="copyText('copyprefix2eg2', this)">Copy</div></pre>
+            <p style="text-align: center;">(or)</p>
+            <pre class="code-container"><code id="copyprefix1">@Age of Empires X</code><div class="copy-icon" onclick="copyText('copyprefix1', this)">Copy</div></pre>
+            <p class="tabbed">Examples</p>
+            <pre class="code-container"><code id="copyprefix1eg1">@Age of Empires Xaoe4</code><div class="copy-icon" onclick="copyText('copyprefix1eg1', this)">Copy</div></pre>
+            <pre class="code-container"><code id="copyprefix1eg2">@Age of Empires Xhelp</code><div class="copy-icon" onclick="copyText('copyprefix1eg2', this)">Copy</div></pre>
+	    <p class="tabbed">*mentionable don't function when copied and pasted</p>
+        </div>
+
         
       	<div class="index-list">
             <h3>Basic Commands</h3>
@@ -212,7 +230,7 @@
             <h4>add</h4>
             <p class="tabbed">You can add your player ID to the bot's database by using this command.</p>
             <p class="tabbed">*if you dont know your unique player ID, here is how to <a href="#getplayerid">Get your player ID</a> from www.aoe4world.com</p>
-            <pre class="code-container"><code id="add">\aoe4 add</code><div class="copy-icon" onclick="copyText('add', this)">Copy</div></pre>
+            <pre class="code-container"><code id="copyadd">\aoe4 add</code><div class="copy-icon" onclick="copyText('copyadd', this)">Copy</div></pre>
             <p class="tabbed">Once you have your player ID, apply to the command like shown blow.</p>
             <pre class="code-container"><code>\aoe4 add 123456</code></pre>
             <p class="tabbed">*Replace the player ID with your own ID</p>
@@ -222,7 +240,7 @@
             <h4>remove</h4>
             <p class="tabbed">With this command, all of your data is deleted from the bot's records..</p>
             <p class="tabbed">Copy and paste the command below; *your player ID is not required.</p>
-            <pre class="code-container"><code id="rm">\aoe4 rm</code><div class="copy-icon" onclick="copyText('rm', this)">Copy</div></pre>
+            <pre class="code-container"><code id="copyrm">\aoe4 rm</code><div class="copy-icon" onclick="copyText('copyrm', this)">Copy</div></pre>
         </div>
         
       	<div class="command-section" id="getplayerid">
@@ -269,7 +287,7 @@
             <p style="text-align: center;">(or)</p>
             
             <p class="tabbed">You can add player ID to the bot's database by using this command.</p>
-            <pre class="code-container"><code id="adminadd">\aoe4 admin add</code><div class="copy-icon" onclick="copyText('adminadd', this)">Copy</div></pre>
+            <pre class="code-container"><code id="copyadminadd">\aoe4 admin add</code><div class="copy-icon" onclick="copyText('copyadminadd', this)">Copy</div></pre>
             <p class="tabbed">Once you have your player ID, the command appears like this.</p>
             <pre class="code-container"><code>\aoe4 admin add 123456</code></pre>
         </div>
@@ -278,7 +296,7 @@
         	<p>Users can be removed using either their userid or their player ID.</p>
             <h4>removeplayer</h4>
             <p class="tabbed">use player ID to delete the user from database.</p>
-      		<pre class="code-container"><code id="removeplayer">\aoe4 admin removeplayer</code><div class="copy-icon" onclick="copyText('removeplayer', this)">Copy</div></pre>
+      		<pre class="code-container"><code id="copyremoveplayer">\aoe4 admin removeplayer</code><div class="copy-icon" onclick="copyText('copyremoveplayer', this)">Copy</div></pre>
           	<pre class="code-container"><code>\aoe4 admin removeplayer 12xxxx</code></pre>
 		</div>
             
@@ -286,21 +304,21 @@
         	<p>Users can be removed using either their userid or their player ID.</p>
             <h4>removeuser</h4>
             <p class="tabbed">use userid to delete the user from database.</p>
-      		<pre class="code-container"><code id="removeuser">\aoe4 admin removeuser</code><div class="copy-icon" onclick="copyText('removeuser', this)">Copy</div></pre>
+      		<pre class="code-container"><code id="copyremoveuser">\aoe4 admin removeuser</code><div class="copy-icon" onclick="copyText('copyremoveuser', this)">Copy</div></pre>
           	<pre class="code-container"><code>\aoe4 admin removeuser 12345678</code></pre>
        	</div>
         
         <div class="command-section" id="list">
             <h4>removeuser</h4>
             <p class="tabbed">Lists user from database.</p>
-      		<pre class="code-container"><code id="list">\aoe4 admin list</code><div class="copy-icon" onclick="copyText('list', this)">Copy</div></pre>
+      		<pre class="code-container"><code id="copylist">\aoe4 admin list</code><div class="copy-icon" onclick="copyText('copylist', this)">Copy</div></pre>
        	</div>
         
         <div class="command-section" id="set">
             <h4>set</h4>
             <p class="tabbed">This command used to set the channel id where the pre and post game summary are posted.</p>
             <p class="tabbed">Go to the desired channel and execute the command</p>
-      		<pre class="code-container"><code id="set">\aoe4 admin set</code><div class="copy-icon" onclick="copyText('set', this)">Copy</div></pre>
+      		<pre class="code-container"><code id="copyset">\aoe4 admin set</code><div class="copy-icon" onclick="copyText('copyset', this)">Copy</div></pre>
             <p class="tabbed">To change or remove the channel from the database.</p>
             <ul>
             	<li>To change the channel apply the above command on the different channel.</li>
@@ -311,7 +329,7 @@
 		<div class="command-section" id="leaderboard">
             <h4>leaderboard</h4>
             <p class="tabbed">use this command to produce leaderboard</p>
-      		<pre class="code-container"><code id="leaderboard">\aoe4 admin leaderboard</code><div class="copy-icon" onclick="copyText('leaderboard', this)">Copy</div></pre>
+      		<pre class="code-container"><code id="copyleaderboard">\aoe4 admin leaderboard</code><div class="copy-icon" onclick="copyText('copyleaderboard', this)">Copy</div></pre>
             <p class="tabbed">*Dont not delete the messages it produces,The leaderboard will be edited every 24hr.</p>
             <p class="tabbed">*Note Please attempt to utilize this feature in an empty channel to prevent the leaderboard from moving to the top.</p>
 		</div>
@@ -319,13 +337,13 @@
 		<div class="command-section" id="delleaderboard">
             <h4>delleaderboard</h4>
             <p class="tabbed">use this command to remove leaderboard data from database.</p>
-      		<pre class="code-container"><code id="delleaderboard">\aoe4 admin delleaderboard</code><div class="copy-icon" onclick="copyText('delleaderboard', this)">Copy</div></pre>
+      		<pre class="code-container"><code id="copydelleaderboard">\aoe4 admin delleaderboard</code><div class="copy-icon" onclick="copyText('copydelleaderboard', this)">Copy</div></pre>
       	</div>
             
 		<div class="command-section" id="createroles">
             <h4>createroles</h4>
             <p class="tabbed">use this command to roles, this will create like 19 roles</p>
-      		<pre class="code-container"><code id="createroles">\aoe4 admin createroles</code><div class="copy-icon" onclick="copyText('createroles', this)">Copy</div></pre>
+      		<pre class="code-container"><code id="copycreateroles">\aoe4 admin createroles</code><div class="copy-icon" onclick="copyText('copycreateroles', this)">Copy</div></pre>
             <p class="tabbed">*Don't change bot role postion below any of the role created</p>
             <p class="tabbed">*Don't delete any of the roles created.</p>
             <p class="tabbed">The generated rank role permission can be changed to your preference, including the color scheme.</p>
@@ -334,19 +352,19 @@
 		<div class="command-section" id="deleteroles">
             <h4>deleteroles</h4>
             <p class="tabbed">Execute this command to delete created role data from the database and remove all associated roles.</p>
-      		<pre class="code-container"><code id="deleteroles">\aoe4 admin delleaderboard</code><div class="copy-icon" onclick="copyText('deleteroles', this)">Copy</div></pre>
+      		<pre class="code-container"><code id="copydeleteroles">\aoe4 admin delleaderboard</code><div class="copy-icon" onclick="copyText('copydeleteroles', this)">Copy</div></pre>
       	</div>
         
         <div class="command-section" id="process">
             <h4>process</h4>
             <p class="tabbed">This command shows the list of player ID in cache</p>
-      		<pre class="code-container"><code id="process">\aoe4 admin process</code><div class="copy-icon" onclick="copyText('process', this)">Copy</div></pre>
+      		<pre class="code-container"><code id="copyprocess">\aoe4 admin process</code><div class="copy-icon" onclick="copyText('copyprocess', this)">Copy</div></pre>
        	</div>
         
         <div class="command-section" id="clear">
             <h4>clear</h4>
             <p class="tabbed">This command clears the cache while leaving the database unchanged. Instructions for this action are displayed in the warnings.</p>
-      		<pre class="code-container"><code id="clear">\aoe4 admin clear</code><div class="copy-icon" onclick="copyText('clear', this)">Copy</div></pre>
+      		<pre class="code-container"><code id="copyclear">\aoe4 admin clear</code><div class="copy-icon" onclick="copyText('copyclear', this)">Copy</div></pre>
        	</div>
 
 	<div class="command-section">
@@ -380,7 +398,7 @@
 		
     <script>
 function copyText(elementId, clickedElement) {
-    const commandText = document.getElementById(elementId).querySelector('code').textContent.trim();
+    const commandText = document.getElementById(elementId).textContent.trim();
     navigator.clipboard.writeText(commandText)
         .then(() => {
             updateButtonState(clickedElement);
