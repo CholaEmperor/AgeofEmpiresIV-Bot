@@ -151,6 +151,25 @@
 		.tabbed {
         padding-left: 20px; /* Adjust the value as needed */
     }
+        /* Style for the gallery */
+        .gallery {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+          grid-gap: 10px;
+          padding: 20px;
+        }
+
+        .gallery img {
+          width: 100%;
+          height: auto;
+          border-radius: 5px;
+          cursor: pointer;
+          transition: transform 0.3s ease-in-out;
+        }
+
+        .gallery img:hover {
+          transform: scale(1.1);
+        }
     </style>
     
 </head>
@@ -329,6 +348,14 @@
             <p class="tabbed">This command clears the cache while leaving the database unchanged. Instructions for this action are displayed in the warnings.</p>
       		<pre class="code-container"><code id="clear">\aoe4 admin clear</code><div class="copy-icon" onclick="copyText('clear', this)">Copy</div></pre>
        	</div>
+        
+    <div class="gallery">
+        <!-- Replace the image URLs with your own image URLs -->
+        <img src="img/Screenshot 2023-11-14 205333.png" alt="Image 1">
+        <img src="img/Screenshot 2023-11-14 205342.png" alt="Image 2">
+        <img src="img/Screenshot 2023-11-14 205440.png" alt="Image 3">
+        <!-- Add more images as needed -->
+    </div>
 
         <!-- Example image section -->
         <div class="command-section"  id="commands">
