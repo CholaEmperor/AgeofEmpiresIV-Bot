@@ -422,6 +422,14 @@
     </div>
 		
     <script>
+function toggleSpoiler() {
+	const spoilerContent = document.getElementById("spoiler-content");
+	if (spoilerContent.style.display === "none") {
+	    spoilerContent.style.display = "block";
+	} else {
+	    spoilerContent.style.display = "none";
+	}
+}
 function copyText(elementId, clickedElement) {
     const commandText = document.getElementById(elementId).textContent.trim();
     navigator.clipboard.writeText(commandText)
