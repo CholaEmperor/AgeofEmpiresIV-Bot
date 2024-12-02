@@ -222,6 +222,7 @@
             <ul>
                 <li><a href="#add">add</a></li>
                 <li><a href="#rm">remove</a></li>
+		<li><a href="#myspawn">myspawn</a> -Only for whitelist.</li>
                 <!-- Add more list items for other sections -->
             </ul>
         </div>
@@ -366,6 +367,30 @@
             <p class="tabbed">This command clears the cache while leaving the database unchanged. Instructions for this action are displayed in the warnings.</p>
       		<pre class="code-container"><code id="copyclear">\aoe4 admin clear</code><div class="copy-icon" onclick="copyText('copyclear', this)">Copy</div></pre>
        	</div>
+
+	<div class="command-section" id="myspawn">
+	    <h2>Disclaimer: Spawn Location and Opponent Civilization Prediction Feature</h2>
+	    <p><strong>What Does This Feature Do?</strong><br>
+	    This feature informs players about their spawn location (e.g., corner or middle) and nearby opponents' civilizations during the loading screen.</p>
+	
+	    <p><strong>How Does It Work?</strong><br>
+	<button onclick="toggleSpoiler()">Show Detailed Explanation</button>
+	<div id="spoiler-content" style="display: none; margin-top: 10px;">
+	    	Player spawn locations and loading screen player slots follow consistent patterns on almost every map. While a few maps have two possible spawn patterns, most maps are predictable based on these correlations.</p>
+	
+	        <p><strong>How Did I Discover This?</strong><br>
+	        In a Discord group where friends from my community gather, we often play team games, including Age of Empires IV. One of my friends hypothesized that player spawns weren’t random and could be deduced during the loading screen. Intrigued, we tested his theory and found it to be surprisingly accurate. From then on, we started planning strategies during the loading screen based on this knowledge.</p>
+	        <p>After becoming familiar with the patterns, I decided to automate this process and added it to my bot, which had already been functioning for months with other features.</p>
+	
+	        <p><strong>Is This Ethical?</strong><br>
+	        I’m not entirely sure how many people in the broader player base are aware of this spawn pattern correlation. However, after learning the patterns, it became straightforward for us to deduce spawns manually without the bot. For reference:
+	        <ul>
+	            <li>There are approximately 50 maps, but only 4 to 6 unique spawn patterns.</li>
+	            <li>In ranked games, players typically veto 3 maps, leaving around 7 maps to consider—making it even easier to predict spawns.</li>
+	        </ul>
+	        Given this, I personally don’t believe automating this process provides a significant advantage to those familiar with the spawn patterns. This feature has been used by me and my friends (via a whitelist) since Season 8. For Season 9, I am extending access to my Ko-fi supporters as an additional perk, As the creator of this bot, it brings me great joy to see people using what I’ve built.</p>
+    
+	</div>
 
 	<div class="command-section">
 	<h4>Gallery</h4>
